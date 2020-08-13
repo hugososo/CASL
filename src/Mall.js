@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet,Text,TouchableOpacity,View,Dimensions,ImageBackground } from 'react-native';
-import {Header, Left,Body, Right, Icon} from 'native-base';
+import {Container, Header, Left,Body, Right, Icon} from 'native-base';
 import Carousel from 'react-native-snap-carousel'; 
 
 const { width } = Dimensions.get('window');
@@ -64,6 +64,15 @@ class Mall extends React.Component {
   render(){
     return(
       <View style={styles.container}>
+        <Header transparent>
+          <Left style={{flex:1}}>
+            <Icon name="menu" onPress={() => this.props.navigation.openDrawer()}/>
+          </Left>
+          <Body style={{flex:1}}>
+            <Icon name="ios-home" style={{alignSelf:'center', color: "orange"}}/>
+          </Body>
+          <Right style={{flex:1}}></Right>
+        </Header>
         <View style={styles.carousel_container}>
           <Carousel
             layout={'default'}
@@ -102,8 +111,6 @@ class Mall extends React.Component {
             <Text style={{marginTop:10}}>Play</Text>
           </View>
         </View>
-        
-        
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
           <Text>HomePage</Text>
         </View>

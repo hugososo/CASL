@@ -2,12 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Header, Left,Body, Right, Icon} from 'native-base';
 
-const CarPark = () => {
+const CarPark = (props) => {
     return(
     <View style={styles.container}>
-        <Header>
+        <Header transparent>
           <Left>
-            <Icon name="menu" onPress={() => this.props.navigation.openDrawer()}/>
+            <Icon name="menu" onPress={() => props.navigation.openDrawer()}/>
           </Left>
           <Body>
             <Icon name="car" style={{color: "orange"}}/>

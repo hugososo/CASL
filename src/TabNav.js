@@ -15,7 +15,7 @@ export default function TabNav() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ iconName, color, size }) => {
 
-            if (route.name === 'Home') {
+            if (route.name === 'Mall') {
               iconName = 'ios-home';
             } else if (route.name === 'CarPark') {
               iconName = 'ios-car';
@@ -30,7 +30,7 @@ export default function TabNav() {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Home" component={Mall} />
+        <Tab.Screen name="Mall" component={Mall} />
         <Tab.Screen name="CarPark" component={CarPark} />
       </Tab.Navigator>
   );
