@@ -4624,6 +4624,13 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-anchor-carousel@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-anchor-carousel/-/react-native-anchor-carousel-3.1.2.tgz#d2ede7d51569b1a78b96665d0fd35da2c46c23a6"
+  integrity sha512-LPnK0mIK+/+t6gki14fQWMSMA2NbiG9gLGayuw2sNCegTnQQGl+NYbvyHinAH7WEm26dZe1YHlRnNPOaEzqKUQ==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-appearance@~0.3.3:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/react-native-appearance/-/react-native-appearance-0.3.4.tgz#2cbcbc5142cdc1898c116684f519b16c879cbec2"
