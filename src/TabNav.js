@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import Mall from './Mall';
+import Index from './Index';
 import CarPark from './CarPark';
 
 const Tab = createBottomTabNavigator();
@@ -30,7 +30,7 @@ export default function TabNav() {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Mall" component={Mall} />
+        <Tab.Screen name="Mall" component={Index} />
         <Tab.Screen name="CarPark" component={CarPark} />
       </Tab.Navigator>
   );
