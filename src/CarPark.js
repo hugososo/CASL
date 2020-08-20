@@ -16,7 +16,7 @@ const CarPark = (props) => {
           </Right>
         </Header>
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
-          <Text>CarPark</Text>
+          <Text>1231</Text>
         </View>
       </View>
     );

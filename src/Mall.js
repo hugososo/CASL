@@ -1,9 +1,17 @@
 import React from 'react';
-import { StyleSheet,Text,TouchableOpacity,View,Dimensions,ImageBackground } from 'react-native';
+import { StyleSheet,ScrollView,Text,TouchableOpacity,View,Dimensions,ImageBackground } from 'react-native';
 import {Container, Header, Left,Body, Right, Icon} from 'native-base';
 import Carousel from 'react-native-snap-carousel'; 
+import MySearchBar from '../components/MySearchBar';
+import ShopList from '../components/ShopList'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const { width } = Dimensions.get('window');
+let { width } = Dimensions.get('window');
+if(width>500){
+  width=500
+}
+const { height } = Dimensions.get('window');
 
 const data = [
   {
@@ -32,7 +40,6 @@ const data = [
     content: 'Buy over $500 have 48 hours free car parking quota!!'
   }
 ];
-
 
 class Mall extends React.Component {
 
@@ -63,16 +70,8 @@ class Mall extends React.Component {
 
   render(){
     return(
-      <View style={styles.container}>
-        <Header transparent>
-          <Left style={{flex:1}}>
-            <Icon name="menu" onPress={() => this.props.navigation.openDrawer()}/>
-          </Left>
-          <Body style={{flex:1}}>
-            <Icon name="ios-home" style={{alignSelf:'center', color: "orange"}}/>
-          </Body>
-          <Right style={{flex:1}}></Right>
-        </Header>
+      // <View style={styles.container}>
+        <ScrollView style={styles.container}>
         <View style={styles.carousel_container}>
           <Carousel
             layout={'default'}
@@ -86,10 +85,12 @@ class Mall extends React.Component {
           />
         </View>
         <View style={{flex: 1, flexWrap: 'wrap', flexDirection:'row',justifyContent:'space-around',alignItems:'stretch'}}>
-          <View style={styles.shop}>
+          <TouchableOpacity style={styles.shop}>
+          <View>
             <Icon name="restaurant" style={{color: 'orange', fontSize: 50}}/>
             <Text>Food</Text>
           </View>
+          </TouchableOpacity>
           <View style={styles.shop}>
             <Icon type="MaterialCommunityIcons" name="popcorn" style={{color: 'orange', fontSize: 44}}/>
             <Text style={{marginTop:10}}>Play</Text>
@@ -111,10 +112,11 @@ class Mall extends React.Component {
             <Text style={{marginTop:10}}>Play</Text>
           </View>
         </View>
-        <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
+        <View>
           <Text>HomePage</Text>
         </View>
-      </View>
+        </ScrollView>
+      // </View>
     );
   }
 }
@@ -125,7 +127,9 @@ const styles = {
     backgroundColor: '#D5E2E2'
   },
   carousel_container:{
-    flex: 1.5
+    alignItems: 'center',
+    justifyContent: 'center',
+    height:height/3
   },
   shop: {
     flexBasis: '25%',
