@@ -11,6 +11,8 @@ import Tab from './TabNav';
 import QRScanner from './QRScanner';
 import AccountInfo from './AccountInfo';
 import CarPark from './CarPark';
+import GetCoupons from './GetCoupons';
+import Coupons from './MyCoupons'
 import {Header, Left,Body, Right, Icon} from 'native-base';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -38,6 +40,8 @@ export default function DrawerNav() {
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={Tab} />
         <Drawer.Screen name="Profile" component={Profile} />
+        <Drawer.Screen name="Get Coupons" component={GetCoupons} />
+        <Drawer.Screen name="My Coupons" component={Coupons} />
         <Drawer.Screen name="Setting" component={Root} />
         <Drawer.Screen name="QR Scanner" component={QRScanner} />
       </Drawer.Navigator>
