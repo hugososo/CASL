@@ -13,6 +13,8 @@ import AccountInfo from './AccountInfo';
 import CarPark from './CarPark';
 import GetCoupons from './GetCoupons';
 import Coupons from './MyCoupons'
+import Login from './Login';
+import SignUp from './SignUp';
 import {Header, Left,Body, Right, Icon} from 'native-base';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -44,6 +46,8 @@ export default function DrawerNav() {
         <Drawer.Screen name="My Coupons" component={Coupons} />
         <Drawer.Screen name="Setting" component={Root} />
         <Drawer.Screen name="QR Scanner" component={QRScanner} />
+        <Drawer.Screen name="Login" component={Login} />
+        <Drawer.Screen name="Sign Up" component={SignUp} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
